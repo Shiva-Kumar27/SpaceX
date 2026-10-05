@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpaceX — a small study of extreme spacetime</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="home">
+<canvas id="sky" class="sky" aria-hidden="true"></canvas>
 
 <nav class="nav">
   <div class="nav-inner">
@@ -23,25 +25,24 @@
 </nav>
 
 <header class="wrap hero">
-  <h1>Three ways spacetime<br>breaks its own rules.</h1>
+  <h1>Three ways spacetime<br><em>breaks its own rules.</em></h1>
   <p>A small, quiet study of the objects general relativity allows but rarely explains — built while learning to build.</p>
-  <div class="orb" style="background:radial-gradient(circle at 50% 50%, rgba(185,168,255,0.5), rgba(255,191,217,0.3) 45%, transparent 75%); box-shadow:0 0 100px 20px rgba(185,168,255,0.15);"></div>
 </header>
 
 <main class="wrap">
   <div class="portals">
-    <a class="portal" data-p="black" href="blackholes.html">
-      <span class="portal-dot" style="--glow:#b9a8ff"></span>
+    <a class="portal" data-p="black" href="blackholes.html" style="--glow:#b9a8ff">
+      <canvas class="thumb" aria-hidden="true"></canvas>
       <h3>Blackholes</h3>
       <p>Where gravity wins completely, and nothing that crosses the line comes back.</p>
     </a>
-    <a class="portal" data-p="white" href="whiteholes.html">
-      <span class="portal-dot" style="--glow:#ffe9c9"></span>
+    <a class="portal" data-p="white" href="whiteholes.html" style="--glow:#ffe9c9">
+      <canvas class="thumb" aria-hidden="true"></canvas>
       <h3>White holes</h3>
       <p>The mathematical mirror of a black hole — a region nothing can enter.</p>
     </a>
-    <a class="portal" data-p="worm" href="wormholes.html">
-      <span class="portal-dot" style="--glow:#ffbfd9"></span>
+    <a class="portal" data-p="worm" href="wormholes.html" style="--glow:#ffbfd9">
+      <canvas class="thumb" aria-hidden="true"></canvas>
       <h3>Wormholes</h3>
       <p>A theoretical shortcut stitching two distant points in spacetime together.</p>
     </a>
@@ -54,5 +55,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
