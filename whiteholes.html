@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>White holes — SpaceX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -23,12 +24,22 @@
 </nav>
 
 <header class="wrap hero">
-  <h1>A door that only<br>opens outward.</h1>
+  <h1>A door that only<br><em>opens outward.</em></h1>
   <p>The time-reverse of a black hole: a region nothing can enter, only leave.</p>
-  <div class="orb"></div>
+  <canvas id="fx" class="fx" aria-hidden="true"></canvas>
 </header>
 
 <main class="wrap">
+  <section class="section reveal">
+    <div class="section-head">
+      <h2>Try it</h2>
+      <div class="section-body demo">
+        <p>Run the motion backward. The equations don't care which way time points.</p>
+        <button class="btn" id="rev" type="button" aria-pressed="false">Reverse time</button>
+        <div class="readout"><b id="state">White hole</b><span id="stateSub">matter streams outward</span></div>
+      </div>
+    </div>
+  </section>
 
   <section class="section reveal">
     <div class="section-head">
@@ -57,6 +68,8 @@
     </div>
   </section>
 
+  
+
   <section class="section reveal">
     <div class="section-head">
       <h2>In numbers</h2>
@@ -78,5 +91,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="fx.js"></script>
 </body>
 </html>

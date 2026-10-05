@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blackholes — SpaceX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -23,13 +24,23 @@
 </nav>
 
 <header class="wrap hero">
-  <h1>The point where light<br>stops leaving.</h1>
+  <h1>The point where light<br><em>stops leaving.</em></h1>
   <p>A region of spacetime warped so far inward that escape velocity exceeds the speed of light.</p>
-  <div class="orb"></div>
+  <canvas id="fx" class="fx" aria-hidden="true"></canvas>
 </header>
 
 <main class="wrap">
 
+  <section class="section reveal">
+    <div class="section-head">
+      <h2>Try it</h2>
+      <div class="section-body demo">
+        <p>Drag to change the mass. The horizon radius follows <strong>Rs = 2GM/c²</strong>.</p>
+        <label class="slider"><span>Mass</span><input type="range" id="mass" min="0" max="10" step="0.01" value="6.63"><output id="massOut"></output></label>
+        <div class="readout"><b id="rsOut"></b><span>Schwarzschild radius</span></div>
+      </div>
+    </div>
+  </section>
   <section class="section reveal">
     <div class="section-head">
       <h2>Formation</h2>
@@ -57,6 +68,7 @@
     </div>
   </section>
 
+
   <section class="section reveal">
     <div class="section-head">
       <h2>In numbers</h2>
@@ -78,5 +90,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="fx.js"></script>
 </body>
 </html>
